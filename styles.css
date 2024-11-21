@@ -1,53 +1,3 @@
-:root {
-    /* Pastel Color Palette */
-    --pastel-pink: #FFD1DC;
-    --pastel-blue: #A3D8FF;
-    --pastel-lavender: #E6E6FA;
-    --pastel-mint: #B0E0E6;
-    --pastel-yellow: #FFFACD;
-    --text-color: #4A4A4A;
-    --background-color: #F8F0E5;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-/* Enhanced Top Navigation */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
 .logo::before {
     content: '';
     position: absolute;
@@ -167,13 +117,6 @@ section ul li:hover {
     transform: translateX(10px);
     background-color: rgba(255,255,255,0.8);
 }
-
-/* Sections with Gradient Backgrounds */
-#home { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-lavender)); }
-#about { background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-yellow)); }
-#tech-stack { background: linear-gradient(135deg, var(--pastel-lavender), var(--pastel-pink)); }
-#projects { background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-blue)); }
-#experience { background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-mint)); }
 
 /* Typography */
 h1 { 
@@ -353,25 +296,6 @@ section {
 .contact-form button:hover {
     background-color: var(--pastel-blue);
     transform: scale(1.05);
-}
-
-/* Lists Styling */
-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-section ul li {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-section ul li:hover {
-    transform: translateX(10px);
-    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Responsive Design */
