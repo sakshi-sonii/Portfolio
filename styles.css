@@ -1,0 +1,389 @@
+:root {
+    /* Pastel Color Palette */
+    --pastel-pink: #FFD1DC;
+    --pastel-blue: #A3D8FF;
+    --pastel-lavender: #E6E6FA;
+    --pastel-mint: #B0E0E6;
+    --pastel-yellow: #FFFACD;
+    --text-color: #4A4A4A;
+    --background-color: #F8F0E5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Enhanced Top Navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--pastel-pink), var(--pastel-blue));
+    transition: width 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover::before {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--pastel-pink), var(--pastel-blue));
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pastel-blue);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Section Layout */
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4rem;
+}
+
+.section-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.section-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-text {
+    flex: 1;
+}
+
+/* Profile and Section Images */
+.profile-image,
+.section-img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 250px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* Sections Styling */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 10%;
+}
+
+/* Lists Styling */
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+section ul li:hover {
+    transform: translateX(10px);
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Sections with Gradient Backgrounds */
+#home { background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-lavender)); }
+#about { background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-yellow)); }
+#tech-stack { background: linear-gradient(135deg, var(--pastel-lavender), var(--pastel-pink)); }
+#projects { background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-blue)); }
+#experience { background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-mint)); }
+
+/* Typography */
+h1 { 
+    font-size: 3rem; 
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn:first-child {
+    background-color: var(--pastel-pink);
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid var(--pastel-blue);
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 2px solid var(--pastel-blue);
+    border-radius: 10px;
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--pastel-pink);
+    border: none;
+    color: white;
+    border-radius: 25px;
+}
+
+:root {
+    --pastel-pink: #FFD1DC;
+    --pastel-blue: #A3D8FF;
+    --pastel-lavender: #E6E6FA;
+    --pastel-mint: #B0E0E6;
+    --pastel-yellow: #FFFACD;
+    --pastel-orange: #FFE4B5;
+    --pastel-green: #D5F5E3;
+    --text-color: #4A4A4A;
+    --background-color: #F8F0E5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 10%;
+}
+
+/* Gradient Backgrounds */
+#home {
+    background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-lavender));
+}
+#about {
+    background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-yellow));
+}
+#tech-stack {
+    background: linear-gradient(135deg, var(--pastel-lavender), var(--pastel-pink));
+}
+#projects {
+    background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-blue));
+}
+#experience {
+    background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-mint));
+}
+#certifications {
+    background: linear-gradient(135deg, var(--pastel-green), var(--pastel-orange));
+}
+#contact {
+    background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-yellow));
+}
+
+/* Form Styling */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--pastel-blue);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--pastel-pink);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--pastel-pink);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: auto;
+}
+
+.contact-form button:hover {
+    background-color: var(--pastel-blue);
+    transform: scale(1.05);
+}
+
+/* Lists Styling */
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+section ul li:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .section-content,
+    .section-content.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-image,
+    .section-text {
+        width: 100%;
+    }
+}
