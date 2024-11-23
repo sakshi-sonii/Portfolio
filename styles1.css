@@ -320,62 +320,6 @@ section ul li:hover {
     border-color: var(--green-600);
 }
 
-/* Contact Form */
-.contact-form {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(22, 101, 52, 0.1);
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid var(--green-200);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--green-200);
-    border-radius: 10px;
-    font-size: 1rem;
-    color: var(--green-900);
-    background: var(--white);
-    transition: all 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--green-500);
-    box-shadow: 0 4px 15px rgba(22, 101, 52, 0.1);
-    outline: none;
-}
-
-.contact-form button {
-    background: linear-gradient(45deg, var(--green-600), var(--green-500));
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-.contact-form button:hover {
-    background: linear-gradient(45deg, var(--green-700), var(--green-600));
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(22, 101, 52, 0.15);
-}
-
 /* Animation */
 @keyframes fadeIn {
     from {
@@ -446,5 +390,85 @@ section ul li:hover {
 
     .btn {
         padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Contact Section Styles */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.contact-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.contact-btn i {
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    border: 1px solid var(--pastel-blue);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn:hover i {
+    transform: scale(1.1);
+}
+
+.contact-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-btn:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-links {
+        gap: 1.5rem;
+    }
+
+    .contact-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-btn i {
+        font-size: 1.5rem;
     }
 }
