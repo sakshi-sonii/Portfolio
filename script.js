@@ -73,7 +73,7 @@ function initContactFormSubmission() {
  * Initializes the theme switcher functionality.
  */
 function initThemeSwitcher() {
-    const themes = ['styles.css', 'styles1.css'];
+    const themes = ['styles.css', 'styles1.css', 'styles2.css'];
     let currentThemeIndex = 0;
 
     // Create and append the theme button if it doesn't exist
